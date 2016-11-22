@@ -31,8 +31,8 @@ public class MainMenuScreen extends Stage implements Screen {
 
         game.batch.begin();
         game.batch.draw(background, 0,0, game.width, game.height);
-        game.font.draw(game.batch, "Welcome to Project Bounce", 50, 940);
         game.font.draw(game.batch, "Tap anywhere to begin", 50, 1000);
+        game.font.draw(game.batch, "Welcome to Project Bounce", 50, 940);
         game.batch.end();
 
         if (Gdx.input.isTouched()) {

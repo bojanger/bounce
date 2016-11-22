@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
 public class Bounce2 extends Game {
 	public SpriteBatch batch;
 	public BitmapFont font;
+	public BitmapFont smallFont;
 	public int width = 1080;
 	public int height = 1920;
 	public int fontSize = 72;
@@ -20,6 +21,8 @@ public class Bounce2 extends Game {
 		FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
 		parameter.size = fontSize;
 		font = fontGen.generateFont(parameter);
+		parameter.size = 36;
+		smallFont = fontGen.generateFont(parameter);
 		fontGen.dispose();
 		this.setScreen(new MainMenuScreen(this));
 	}
